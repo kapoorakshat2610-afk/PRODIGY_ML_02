@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PRODIGY_ML_02 - Customer Segmentation using K-Means Clustering
 
 ## Objective
@@ -47,3 +48,7 @@ The K-Means algorithm successfully segmented customers into distinct groups base
 ## Internship Task
 
 Task 02 completed as part of the Machine Learning Internship at Prodigy InfoTech.
+=======
+# PRODIGY_ML_2
+Create a K-means clustering algorithm to group customers of a retail store based on their purchase history.
+>>>>>>> 3e2dc67bafd2a96ca83a234570213ccd931d6c06
