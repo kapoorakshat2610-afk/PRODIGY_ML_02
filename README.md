@@ -1,40 +1,38 @@
 # Customer Segmentation using K-Means Clustering
 
-## 📌 Project Overview
+## 📌 Overview
 
-This project was developed as part of **Task 02** of the **Machine Learning Internship at Prodigy InfoTech**.
+This project was completed as part of **Task 02** of the **Prodigy InfoTech Machine Learning Internship**.
 
-The objective is to segment retail store customers into distinct groups based on their purchasing behavior using the **K-Means Clustering Algorithm**. Customer segmentation helps businesses understand customer patterns and design targeted marketing strategies.
+The objective is to group retail store customers into meaningful segments using the **K-Means Clustering Algorithm** based on their annual income and spending behavior. Customer segmentation helps businesses understand customer patterns and make data-driven marketing decisions.
 
 ---
 
 ## 🎯 Objective
 
-To group customers of a retail store based on:
+To apply K-Means Clustering and segment customers of a retail store based on:
 
 * Annual Income (k$)
 * Spending Score (1-100)
-
-using the K-Means Clustering algorithm and identify meaningful customer segments.
 
 ---
 
 ## 📂 Dataset
 
-**Dataset:** Mall Customer Segmentation Data
+Dataset: Mall Customer Segmentation Dataset
 
 Source:
 https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python
 
-The dataset contains information about customers, including:
+Features available in the dataset:
 
-* Customer ID
+* CustomerID
 * Gender
 * Age
 * Annual Income (k$)
 * Spending Score (1-100)
 
-For clustering, the following features were selected:
+Features used for clustering:
 
 * Annual Income (k$)
 * Spending Score (1-100)
@@ -45,114 +43,142 @@ For clustering, the following features were selected:
 
 * Python
 * Pandas
-* NumPy
 * Matplotlib
 * Scikit-Learn
 * Jupyter Notebook
 
 ---
 
-## 📊 Project Workflow
+## 📋 Project Workflow
 
 ### 1. Data Collection
 
-* Loaded the customer dataset.
-* Explored dataset structure and features.
+Loaded the customer dataset and explored its structure.
 
 ### 2. Data Preprocessing
 
-* Checked for missing values.
-* Selected relevant numerical features.
+Selected relevant numerical features for clustering.
 
 ### 3. Feature Selection
 
-The following features were used for clustering:
+Used:
 
 * Annual Income (k$)
 * Spending Score (1-100)
 
-### 4. Finding Optimal Number of Clusters
+### 4. Elbow Method
 
-Applied the Elbow Method to determine the optimal number of customer groups.
+Determined the optimal number of clusters by analyzing WCSS values.
 
-### 5. Model Training
+### 5. K-Means Clustering
 
-Implemented K-Means Clustering using Scikit-Learn.
+Applied K-Means to segment customers into distinct groups.
 
-### 6. Customer Segmentation
+### 6. Cluster Evaluation
 
-Assigned customers to different clusters and visualized the results.
+Evaluated clustering quality using the Silhouette Score.
+
+### 7. Data Visualization
+
+Visualized customer clusters and cluster centroids.
 
 ---
 
 ## 📈 Elbow Method
 
-The Elbow Method was used to identify the optimal value of K (number of clusters).
+The Elbow Method was used to determine the optimal number of clusters.
 
 ![Elbow Method](images/elbow_method.png)
 
 ---
 
-## 📉 Customer Segments
+## 📉 Customer Segmentation
 
-The trained K-Means model segmented customers into distinct groups based on their income and spending behavior.
+Customer groups identified using K-Means Clustering.
 
 ![Customer Segments](images/clusters.png)
 
 ---
 
-## 🔍 Business Insights
+## 📏 Cluster Evaluation
 
-The clustering results help identify:
+The Silhouette Score was used to evaluate cluster quality.
+
+**Silhouette Score: 0.554**
+
+Interpretation:
+
+* Close to +1 → Well-separated clusters
+* Around 0 → Overlapping clusters
+* Close to -1 → Poor clustering
+
+The obtained score indicates that the customer groups are reasonably well-defined and meaningful.
+
+---
+
+## 📊 Results Summary
+
+| Metric               | Value                         |
+| -------------------- | ----------------------------- |
+| Algorithm            | K-Means Clustering            |
+| Dataset Size         | 200 Customers                 |
+| Features Used        | Annual Income, Spending Score |
+| Optimal Clusters (K) | 5                             |
+| Evaluation Metric    | Silhouette Score              |
+| Silhouette Score     | 0.554         |
+
+---
+
+## 🔍 Business Insights
 
 ### Cluster 1
 
-Customers with moderate income and moderate spending behavior.
+Customers with balanced income and spending patterns.
 
 ### Cluster 2
 
-High-income customers with high spending scores (premium customers).
+High-income customers with high spending behavior (premium customers).
 
 ### Cluster 3
 
-Low-income customers with low spending scores.
+Low-income customers with lower spending behavior.
 
 ### Cluster 4
 
-High-income customers with low spending scores.
+High-income customers with relatively lower spending.
 
 ### Cluster 5
 
-Low-income customers with high spending scores.
+Low-income customers with unexpectedly high spending.
 
-These insights can be used for:
+Potential applications:
 
-* Personalized marketing campaigns
+* Personalized marketing
 * Customer retention strategies
-* Product recommendations
-* Revenue optimization
+* Product recommendation systems
+* Loyalty program targeting
 
 ---
 
 ## 📁 Project Structure
 
-```text
 PRODIGY_ML_02
-│
-├── data
-│   └── Mall_Customers.csv
-│
-├── images
-│   ├── elbow_method.png
-│   └── clusters.png
-│
-├── notebooks
-│   └── customer_segmentation.ipynb
-│
+
+├── data/
+│ └── Mall_Customers.csv
+
+├── images/
+│ ├── elbow_method.png
+│ └── clusters.png
+
+├── notebooks/
+│ └── customer_segmentation.ipynb
+
 ├── customer_segmentation.py
+
 ├── requirements.txt
+
 └── README.md
-```
 
 ---
 
@@ -170,7 +196,7 @@ git clone https://github.com/kapoorakshat2610-afk/PRODIGY_ML_02.git
 pip install -r requirements.txt
 ```
 
-### Run Project
+### Run the Project
 
 ```bash
 python customer_segmentation.py
@@ -185,19 +211,20 @@ Through this project, I gained practical experience in:
 * Unsupervised Machine Learning
 * K-Means Clustering
 * Customer Segmentation
+* Cluster Evaluation
+* Silhouette Score Analysis
 * Data Visualization
-* Elbow Method
-* Business Data Analysis
+* Business Data Interpretation
 
 ---
 
 ## 🏢 Internship Information
 
-**Company:** Prodigy InfoTech
+**Organization:** Prodigy InfoTech
 
 **Domain:** Machine Learning Internship
 
-**Task:** Task 02 - Customer Segmentation using K-Means Clustering
+**Task:** Task 02 – Customer Segmentation using K-Means Clustering
 
 ---
 
@@ -205,5 +232,5 @@ Through this project, I gained practical experience in:
 
 Akshat Kapoor
 
-GitHub: https://github.com/kapoorakshat2610-afk
-
+GitHub:
+https://github.com/kapoorakshat2610-afk
