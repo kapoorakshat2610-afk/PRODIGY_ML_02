@@ -207,4 +207,3 @@ Akshat Kapoor
 
 GitHub: https://github.com/kapoorakshat2610-afk
 
-LinkedIn: Add your LinkedIn profile link here
